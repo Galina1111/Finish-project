@@ -1,0 +1,168 @@
+<section>
+  <div class="conteiner">
+    <form
+      class="new-phone"
+      #newPhoneForm="ngForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="containers">
+        <div class="containeis">
+
+          <div class="form-group">
+            <p>Gender:</p>
+            <label class="radio-inline">
+              <input
+                type="radio"
+                name="title"
+                [(ngModel)]="title"
+                value="mr."
+              >mr.
+            </label>
+            <!-- [checked]="(title=='mr.')" -->
+            <label class="
+                radio-inline">
+              <input
+                type="radio"
+                name="title"
+                [(ngModel)]="title"
+                value="mrs."
+              >mrs.
+            </label>
+          </div>
+
+        </div>
+        <div>
+          <!-- required -->
+          <div class="vcbc">
+            <label
+              for="imges"
+              class="uploadButton"
+              class="inline"
+            >Загрузить файл</label>
+            <p><input
+                type="file"
+                class="inline"
+                style="opacity: 1; z-index: -1;"
+                id="imges"
+                name="photo"
+                ng-model="file"
+                [(ngModel)]="image"
+                multiple
+                accept="image/*,image/jpeg"
+              ></p>
+            <input
+              type="file"
+              ng-model="files"
+              multiple
+            >
+          </div>
+
+        </div>
+        <div class="form-group box">
+          <input
+            type="text"
+            name="first"
+            class="form-control boxes"
+            placeholder="First Name"
+            #newPhoneFirst="ngModel"
+            [(ngModel)]="first"
+            required
+          />
+
+          <input
+            type="text"
+            name="last"
+            #newPhoneLast='ngModel'
+            class="form-control boxes"
+            placeholder="Last Name"
+            [(ngModel)]="last"
+            required
+          />
+
+          <input
+            type="text"
+            name="eemail"
+            class="form-control boxes"
+            #newPhoneEmail='ngModel'
+            placeholder="Email"
+            [(ngModel)]="email"
+          />
+
+          <input
+            type="text"
+            name="namberph"
+            class="form-control boxes"
+            #newPhoneNamber='ngModel'
+            placeholder="Phone namber"
+            [(ngModel)]="namberph"
+            required
+          />
+
+          <input
+            type="text"
+            name="age"
+            class="form-control boxes"
+            #newPhoneAge='ngModel'
+            placeholder="Age"
+            [(ngModel)]="age"
+          />
+
+          <input
+            type="text"
+            name="street"
+            class="form-control boxes"
+            #newPhoneStreet='ngModel'
+            placeholder="Street"
+            [(ngModel)]="street"
+          />
+
+          <input
+            type="text"
+            name="city"
+            class="form-control boxes"
+            #newPhoneCity='ngModel'
+            placeholder="City"
+            [(ngModel)]="city"
+          />
+
+          <input
+            type="text"
+            name="postcode"
+            class="form-control boxes"
+            #newPhonePostcode='ngModel'
+            placeholder="Postcode"
+            [(ngModel)]="postcode"
+          />
+        </div>
+        <div class="input-group textarea">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Add a note
+              <i class="material-icons note">
+                notes
+              </i>
+            </span>
+            <textarea
+              class="form-control"
+              name="description"
+              #newPhoneDescription='ngModel'
+              [(ngModel)]="description"
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+      <footer>
+        <button
+          class="btn btn-default"
+          type="submit"
+          [disabled]="newPhoneForm.invalid"
+        >
+          Записати <i class="material-icons">
+            create
+          </i>
+        </button>
+      </footer>
+    </form>
+  </div>
+</section>

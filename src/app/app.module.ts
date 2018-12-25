@@ -1,18 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './conponents';
+import { ContactComponent } from './pages';
+import { MainNavComponent } from './conponents/main-nav/main-nav.component';
+import { AddContactComponent } from './pages';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FilterSerchPipe } from './shared/pipes/filter-serch/filter-serch.pipe';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent,
+    MainNavComponent,
+    AddContactComponent,
+    NotFoundComponent,
+    FilterSerchPipe,
+    FooterComponent,
+   
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
