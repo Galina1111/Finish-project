@@ -6,9 +6,9 @@ import { FormGroup, NgControl } from '@angular/forms';
 
 
 
-const  dani: Array<IPhone>=[
+const dani: Array<IPhone> = [
   <IPhone>{
-    image:"https://randomuser.me/api/portraits/men/77.jpg",
+    image: "https://randomuser.me/api/portraits/men/77.jpg",
     title: "mr. ",
     first: "Gustavo",
     last: "Prieto",
@@ -18,10 +18,10 @@ const  dani: Array<IPhone>=[
     street: "3017 calle de tetuán",
     city: "Gijón",
     postcode: 80573,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
   },
   <IPhone>{
-    image:"https://randomuser.me/api/portraits/women/88.jpg",
+    image: "https://randomuser.me/api/portraits/women/88.jpg",
     title: "mrs. ",
     first: "Amy",
     last: "Vavalcanti",
@@ -31,10 +31,10 @@ const  dani: Array<IPhone>=[
     street: "2107 travessa dos açorianos",
     city: "governador valadares",
     postcode: 43552,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
   },
   <IPhone>{
-    image:"https://randomuser.me/api/portraits/men/81.jpg",
+    image: "https://randomuser.me/api/portraits/men/81.jpg",
     title: "mr. ",
     first: "Alfredo",
     last: "Garcia",
@@ -44,10 +44,10 @@ const  dani: Array<IPhone>=[
     street: "8666 york road",
     city: "Carlisle",
     postcode: 79552,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
   },
   <IPhone>{
-    image:"https://randomuser.me/api/portraits/women/47.jpg",
+    image: "https://randomuser.me/api/portraits/women/47.jpg",
     title: "mrs. ",
     first: "Ennya",
     last: "Daluz",
@@ -57,7 +57,7 @@ const  dani: Array<IPhone>=[
     street: "5709 rua da saudade",
     city: "Caxias",
     postcode: 75653,
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
   }
 ];
 
@@ -70,11 +70,11 @@ const  dani: Array<IPhone>=[
 export class ContactComponent implements OnInit {
   public phone: Array<IPhone>;
   // gender='mr.';
+  @Input() imeges: string;
 
-
-  @Input() submitt:Array<IPhone>;
+  @Input() submitt: Array<IPhone>;
   @Input() formControlName !: string;
- 
+
   // public image:string;
   // public first:string;
   // public title:string;
@@ -92,52 +92,55 @@ export class ContactComponent implements OnInit {
 
 
   // @ViewChild('newPhoneForm') newPhoneForm:FormGroup;
-  
+
 
   constructor() {
-   this.phone = dani;
+    this.phone = dani;
   }
 
   ngOnInit(): void {
   }
 
-//   public onSubmit() {
-//     this.phone.push(new NewPhone(this.image, this.title,this.first, this.last, this.email, this.namberph, this.age, this.street,
-// this.city, this.postcode, this.description))
-//     this.first='';
-//     this.last='';
-//     this.email='';
-//     this.namberph ='';
-//     this.age='';
-//     this.street='';
-//     this.city='';
-//     this.postcode ='';
-//     this.description='';
-//   }
-   public isforms(item:IPhone){
+  //   public onSubmit() {
+  //     this.phone.push(new NewPhone(this.image, this.title,this.first, this.last, this.email, this.namberph, this.age, this.street,
+  // this.city, this.postcode, this.description))
+  //     this.first='';
+  //     this.last='';
+  //     this.email='';
+  //     this.namberph ='';
+  //     this.age='';
+  //     this.street='';
+  //     this.city='';
+  //     this.postcode ='';
+  //     this.description='';
+  //   }
+  public isforms(item: IPhone) {
     this.phone.push(item);
-   }
+  }
 
-   public isSubmit(item:IPhone){
-     this.phone.push(item);
-   }
+  public isSubmit(item: IPhone) {
+    this.phone.push(item);
+  }
 
-  public onToggleDescription(item:IPhone): void{
-    item.isDescription=!item.isDescription;
+  // public isChange(item: IPhone): void {
+  //   this.item(tem)
+  // }
+  public onToggleDescription(item: IPhone): void {
+    item.isDescription = !item.isDescription;
     //this.toggleDescription.emit(item);
   }
 
-  public onDeleteDescription(item:IPhone): void{
-    item.isDescription =!item.isDescription;
+  public onDeleteDescription(item: IPhone): void {
+    item.isDescription = !item.isDescription;
     //this.toggleDescription.emit(item)
   }
 
-  public onDeleteTodo(item:IPhone): void{
+  public onDeleteTodo(item: IPhone): void {
     //this.delete.emit(item);
-     const index=this.phone.indexOf(item);
-     if (index>-1){
-      this.phone.splice(index,1);
+    const index = this.phone.indexOf(item);
+    if (index > -1) {
+      this.phone.splice(index, 1);
     }
-   }
-  
+  }
+
 }

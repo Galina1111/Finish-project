@@ -1,75 +1,99 @@
-
 <section>
-<app-add-contact (submitt)="isSubmit($event)"
-                  (forms)="isforms($event)"></app-add-contact> 
+  <app-add-contact
+    (submitt)="isSubmit($event)"
+    (forms)="isforms($event)"
+    (change)="isChange($event)"
+  ></app-add-contact>
 
-<div class="conteiner">
+  <div class="conteiner">
     <div class="add-phone">
-        <div class="input-group mb-3 search">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="material-icons" style="font-size:24px; color:#464040;">
-                    search
-                    </i>
-                </span>
-                <input type="text" class="form-control"
-                name="search"
-                placeholder="Search"
-                [(ngModel)]="search"
-                aria-label="Username" 
-                aria-describedby="basic-addon1"/>
-            </div> 
+      <div class="input-group mb-3 search">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text"
+            id="basic-addon1"
+          >
+            <i
+              class="material-icons"
+              style="font-size:24px; color:#464040;"
+            >
+              search
+            </i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            name="search"
+            placeholder="Search"
+            [(ngModel)]="search"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
         </div>
+      </div>
     </div>
 
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item phone-item"
-          *ngFor="let item of phone  | filterSerch:search">
-          <header class="phone-header">
-            <div class="d-flex">
-              <img src="{{ item.image }}" alt=""/>
-              <div class="dani">
-                  <h5>{{item.title}} {{item.first +' '+ item.last }}</h5>
-                  <div>
-                    <span><i class="far fa-envelope"><b> {{ item.email }} </b> </i> 
-                      <i class="material-icons"> phone </i> {{ item.namberph }}
-                      </span> 
-                </div>
-              
-                </div> 
-                <div class="btn-add-group">
-                    <button class="btn btn-primary  button9"
-                    (click)="onToggleDescription(item)"  >
-                    {{item.isDescription ? 'hide': 'show'}} deteils
-                  </button>
-                  
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item phone-item"
+        *ngFor="let item of phone  | filterSerch:search"
+      >
+        <header class="phone-header">
+          <div class="d-flex">
+            <div class="img">
+              <img
+                src="{{ item.image }}"
+                alt=""
+              />
+            </div>
+            <div class="dani">
+              <h5>{{item.title}} {{item.first +' '+ item.last }}</h5>
+              <div>
+                <span><i class="far fa-envelope"><b> {{ item.email }} </b> </i>
+                  <i class="material-icons"> phone </i> {{ item.namberph }}
+                </span>
+              </div>
 
-                    <!-- <a class="more-about-user"
+            </div>
+            <div class="btn-add-group">
+              <button
+                class="btn btn-primary  button9"
+                (click)="onToggleDescription(item)"
+              >
+                {{item.isDescription ? 'hide': 'show'}} deteils
+              </button>
+
+
+              <!-- <a class="more-about-user"
                     [routerLink]="user.name">More about {{ user.name }}.</a>
                       </p> -->
-                    <button class="btn btn-danger  button9"
-                        (click)="onDeleteTodo(item)">
-                          del
-                      </button>
-                  </div> 
-                
-                </div>
-          </header>
-            <div class="phone-description"
-            *ngIf="item.isDescription">
-              <label for="age">Age:</label>
-              <span id="age">{{item.age}}</span><br> 
-              <label for="St">Street:</label>
-              <span id="St">{{item.street}} </span><br>
-              <label for="c">City:</label>
-              <span id="c"> {{item.city}}</span><br>
-              <label for="pos">Postcode:</label>
-              <span id="pos"> {{item.postcode}}</span><br>
-              <label for="des">Descrip:</label>
-              <span id="des">{{item.description}} </span>
+              <button
+                class="btn btn-danger  button9"
+                (click)="onDeleteTodo(item)"
+              >
+                del
+              </button>
             </div>
-          </li>
-        </ul>
+
+          </div>
+        </header>
+        <div
+          class="phone-description"
+          *ngIf="item.isDescription"
+        >
+          <label for="age">Age:</label>
+          <span id="age">{{item.age}}</span><br>
+          <label for="St">Street:</label>
+          <span id="St">{{item.street}} </span><br>
+          <label for="c">City:</label>
+          <span id="c"> {{item.city}}</span><br>
+          <label for="pos">Postcode:</label>
+          <span id="pos"> {{item.postcode}}</span><br>
+          <label for="des">Descrip:</label>
+          <span id="des">{{item.description}} </span>
+        </div>
+      </li>
+    </ul>
   </div>
 
 </section>

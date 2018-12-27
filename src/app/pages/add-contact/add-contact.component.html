@@ -28,13 +28,53 @@
                 value="mrs."
               >mrs.
             </label>
+            <!-- / -->
+            <label class="radio-inline">
+              <input
+                type="radio"
+                name="tit"
+                [(ngModel)]="image"
+                value="assets/images.jpeg"
+              >mrdfdgfg.
+            </label>
+            <!-- / -->
+          </div>
+          <div class="form-group">
+            <p>Додати:</p>
+            <label class="checkbox-inline">
+              <input
+                ng-model="image"
+                type="checkbox"
+                [checked]=true
+                [(ngModel)]="image"
+                value='assets/images.jpeg'
+              >
+              <img
+                src="assets/images.jpeg"
+                alt="phone"
+              >
+            </label>
+
+            <label class="
+            checkbox-inline">
+              <input
+                ng-model="image"
+                type="checkbox"
+                [(ngModel)]="image"
+                value="assets/images (1).jpeg"
+              >
+              <img
+                src="assets/images (1).jpeg"
+                alt="phone"
+              >
+            </label>
           </div>
 
         </div>
         <div>
           <!-- required -->
           <div class="vcbc">
-            <label
+            <!-- <label
               for="imges"
               class="uploadButton"
               class="inline"
@@ -42,19 +82,56 @@
             <p><input
                 type="file"
                 class="inline"
-                style="opacity: 1; z-index: -1;"
-                id="imges"
-                name="photo"
                 ng-model="file"
                 [(ngModel)]="image"
                 multiple
-                accept="image/*,image/jpeg"
-              ></p>
-            <input
+                accept="image/*,image/jpeg image/jpeg, .jpeg image/png, .png"
+              ></p> -->
+            <!-- <input
               type="file"
-              ng-model="files"
-              multiple
-            >
+              name="file"
+              ngModel
+              accept="image/*"
+              (change)="onChange($event)"
+            > -->
+            <!-- <input
+              type="file"
+              [(ngModel)]="image"
+              ng-model="editItem._attachments_uri.image"
+              accept="image/*"
+            /> -->
+            <!-- *** -->
+
+
+            <!-- <div class="file-field md-form">
+              <div
+                mdbBtn
+                floating="true"
+                size="md"
+                color="amber"
+                mdbWavesEffect
+              >
+                <i
+                  class="fa fa-cloud-upload"
+                  aria-hidden="true"
+                ></i>
+                <input
+                  type="file"
+                  mdbFileSelect
+                  (uploadOutput)="onUploadOutput($event)"
+                  [uploadInput]="uploadInput"
+                >
+              </div>
+              <div class="file-path-wrapper mt-3">
+                <input
+                  class="file-path"
+                  type="text"
+                  placeholder="Upload your file"
+                  [value]="showFiles()"
+                >
+              </div>
+            </div> -->
+            <!-- *** -->
           </div>
 
         </div>
@@ -72,8 +149,8 @@
           <input
             type="text"
             name="last"
-            #newPhoneLast='ngModel'
             class="form-control boxes"
+            #newPhoneLast='ngModel'
             placeholder="Last Name"
             [(ngModel)]="last"
             required
@@ -157,6 +234,7 @@
           class="btn btn-default"
           type="submit"
           [disabled]="newPhoneForm.invalid"
+          (click)="startUpload()"
         >
           Записати <i class="material-icons">
             create

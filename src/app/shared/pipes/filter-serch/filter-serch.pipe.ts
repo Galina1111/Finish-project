@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import { NgxUploaderModule } from 'ngx-uploader';
 
 @Pipe({
   name: 'filterSerch'
@@ -11,7 +11,7 @@ export class FilterSerchPipe implements PipeTransform {
 
   //   return data.filter((el) => {
   //     return el.title.toLowerCase().indexOf(search.toLowerCase()) > -1;
-  
+
   //   });
   // }
   transform(data: any, search: string): any {

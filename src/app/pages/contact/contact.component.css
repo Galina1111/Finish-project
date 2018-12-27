@@ -1,3 +1,6 @@
+*{
+    font-size: 20px;
+}
 .d-flex{
     display: flex;
 }
@@ -44,7 +47,7 @@ button.button9 {
     top: 42px;
     display: inline-block;
     color: #777674;
-    height: 58px;
+    height: 66px;
     font-weight: bold;
     text-decoration: none;
     text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
@@ -80,7 +83,7 @@ button.button9 {
     line-height: 1;
   }
   .phone-description label {
-    width: 72px;
+    width: 95px;
     text-align: left;
     text-decoration-line: underline;
     color: #5a035a;
@@ -95,7 +98,7 @@ button.btn.btn-danger {
 }
 button.btn.btn-primary.button9 {
     position: absolute;
-    left: 74%;
+    left: 70%;
     top: auto;
 }
 .btn-danger {
@@ -103,6 +106,9 @@ button.btn.btn-primary.button9 {
 }
 .input-group-prepend {
     margin-left: 21px;
+}
+.img {
+    width: 100px;
 }
 
  
