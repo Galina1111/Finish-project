@@ -27,6 +27,7 @@
     "humanize-bytes": "^1.0.1",
     "materialize-css": "^1.0.0-rc.2",
     "ng-uikit": "^0.1.1",
+    "ngx-bootstrap": "^3.1.4",
     "ngx-filter-pipe": "^2.1.2",
     "ngx-uploader": "^7.0.0",
     "rxjs": "~6.3.3",

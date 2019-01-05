@@ -3,3 +3,12 @@
     margin: 0;
     padding: 0;
  }
+ .app-modal footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px 20px;
+  }
+  
+  .app-modal footer button:not(:last-child) {
+    margin-right: 10px;
+  }

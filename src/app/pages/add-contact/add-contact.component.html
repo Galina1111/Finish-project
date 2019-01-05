@@ -14,9 +14,10 @@
               <input
                 type="radio"
                 name="title"
-                [(ngModel)]="title"
-                value="mr."
+                [(ngModel)]="image"
+                value="assets/user-1.png"
               >mr.
+
             </label>
             <!-- [checked]="(title=='mr.')" -->
             <label class="
@@ -24,24 +25,24 @@
               <input
                 type="radio"
                 name="title"
-                [(ngModel)]="title"
-                value="mrs."
+                [(ngModel)]="image"
+                value="assets/user-2.png"
               >mrs.
             </label>
             <!-- / -->
-            <label class="radio-inline">
+            <!-- <label class="radio-inline">
               <input
                 type="radio"
                 name="tit"
                 [(ngModel)]="image"
-                value="assets/images.jpeg"
+                value="assets/user-1.png"
               >mrdfdgfg.
-            </label>
+            </label> -->
             <!-- / -->
           </div>
           <div class="form-group">
             <p>Додати:</p>
-            <label class="checkbox-inline">
+            <!-- <label class="checkbox-inline">
               <input
                 ng-model="image"
                 type="checkbox"
@@ -67,7 +68,7 @@
                 src="assets/images (1).jpeg"
                 alt="phone"
               >
-            </label>
+            </label> -->
           </div>
 
         </div>
@@ -244,3 +245,26 @@
     </form>
   </div>
 </section>
+
+
+
+<ng-template #phoneModal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+  </div>
+  <div class="modal-body">
+    Додати новий контакт <b>{{ newPhone.first }}</b>?
+  </div>
+  <footer>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="cancel()"
+    >Cancel</button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="save()"
+    >Save</button>
+  </footer>
+</ng-template>

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -17,6 +16,8 @@ import { FilterSerchPipe } from './shared/pipes/filter-serch/filter-serch.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { from } from 'rxjs';
 
+import { ModalModule } from 'ngx-bootstrap';
+
 
 
 @NgModule({
@@ -30,14 +31,13 @@ import { from } from 'rxjs';
     FilterSerchPipe,
     FooterComponent,
 
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

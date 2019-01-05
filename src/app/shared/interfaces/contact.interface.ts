@@ -1,7 +1,5 @@
 export interface IPhone {
-
-
-
+  //id: number;
   image: string;
   title: string;
   first: string;
@@ -11,7 +9,7 @@ export interface IPhone {
   age: any;
   street: any;
   city: string;
-  postcode: number;
+  postcode: any;
   description: string;
   isDescription: boolean;
 }
