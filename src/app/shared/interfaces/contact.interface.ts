@@ -1,5 +1,5 @@
 export interface IPhone {
-  //id: number;
+  id: number;
   image: string;
   title: string;
   first: string;

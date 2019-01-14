@@ -5,138 +5,65 @@
       #newPhoneForm="ngForm"
       (ngSubmit)="onSubmit()"
     >
-      <div class="containers">
-        <div class="containeis">
+      <div class="containers form-group row">
+        <div class="containeis  form-group col-lg-6">
 
-          <div class="form-group">
+
+          <label
+            class="radio-inline col"
+            for="colFormLabelSm"
+          >
             <p>Gender:</p>
-            <label class="radio-inline">
+            <div class="coll">
               <input
                 type="radio"
                 name="title"
+                id="colFormLabelSm"
                 [(ngModel)]="image"
                 value="assets/user-1.png"
-              >mr.
+              />mr.
 
-            </label>
-            <!-- [checked]="(title=='mr.')" -->
-            <label class="
-                radio-inline">
               <input
                 type="radio"
                 name="title"
                 [(ngModel)]="image"
                 value="assets/user-2.png"
-              >mrs.
-            </label>
-            <!-- / -->
-            <!-- <label class="radio-inline">
-              <input
-                type="radio"
-                name="tit"
-                [(ngModel)]="image"
-                value="assets/user-1.png"
-              >mrdfdgfg.
-            </label> -->
-            <!-- / -->
-          </div>
+              />mrs.
+            </div>
+          </label>
+
+
+
           <div class="form-group">
-            <p>Додати:</p>
-            <!-- <label class="checkbox-inline">
-              <input
-                ng-model="image"
-                type="checkbox"
-                [checked]=true
-                [(ngModel)]="image"
-                value='assets/images.jpeg'
-              >
-              <img
-                src="assets/images.jpeg"
-                alt="phone"
-              >
-            </label>
+            <div class="input-group-prepend">
+              <span class="input-group-text">Add a note
+                <i class="material-icons note">
+                  notes
+                </i>
+              </span>
+              <textarea
+                class="form-control"
+                name="description"
+                #newPhoneDescription='ngModel'
+                [(ngModel)]="description"
+                aria-label="With textarea"
+              ></textarea>
+            </div>
+          </div>
 
-            <label class="
-            checkbox-inline">
-              <input
-                ng-model="image"
-                type="checkbox"
-                [(ngModel)]="image"
-                value="assets/images (1).jpeg"
-              >
+          <div class="form-group thumbnail">
+            <div class="image">
               <img
-                src="assets/images (1).jpeg"
-                alt="phone"
+                src="assets/kak-prosledit-za-abonentom-po-nomeru-mobilnogo1.jpg"
+                alt=""
               >
-            </label> -->
+            </div>
           </div>
 
         </div>
-        <div>
-          <!-- required -->
-          <div class="vcbc">
-            <!-- <label
-              for="imges"
-              class="uploadButton"
-              class="inline"
-            >Загрузить файл</label>
-            <p><input
-                type="file"
-                class="inline"
-                ng-model="file"
-                [(ngModel)]="image"
-                multiple
-                accept="image/*,image/jpeg image/jpeg, .jpeg image/png, .png"
-              ></p> -->
-            <!-- <input
-              type="file"
-              name="file"
-              ngModel
-              accept="image/*"
-              (change)="onChange($event)"
-            > -->
-            <!-- <input
-              type="file"
-              [(ngModel)]="image"
-              ng-model="editItem._attachments_uri.image"
-              accept="image/*"
-            /> -->
-            <!-- *** -->
 
-
-            <!-- <div class="file-field md-form">
-              <div
-                mdbBtn
-                floating="true"
-                size="md"
-                color="amber"
-                mdbWavesEffect
-              >
-                <i
-                  class="fa fa-cloud-upload"
-                  aria-hidden="true"
-                ></i>
-                <input
-                  type="file"
-                  mdbFileSelect
-                  (uploadOutput)="onUploadOutput($event)"
-                  [uploadInput]="uploadInput"
-                >
-              </div>
-              <div class="file-path-wrapper mt-3">
-                <input
-                  class="file-path"
-                  type="text"
-                  placeholder="Upload your file"
-                  [value]="showFiles()"
-                >
-              </div>
-            </div> -->
-            <!-- *** -->
-          </div>
-
-        </div>
-        <div class="form-group box">
+        <!-- // <div class="containers col"> -->
+        <div class="form-group col-lg-6 box">
           <input
             type="text"
             name="first"
@@ -212,38 +139,28 @@
             [(ngModel)]="postcode"
           />
         </div>
-        <div class="input-group textarea">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Add a note
-              <i class="material-icons note">
-                notes
-              </i>
-            </span>
-            <textarea
-              class="form-control"
-              name="description"
-              #newPhoneDescription='ngModel'
-              [(ngModel)]="description"
-              aria-label="With textarea"
-            ></textarea>
-          </div>
 
+
+      </div>
+
+
+      <div class="form-group row col-lg-6 sub">
+        <div class="col-auto">
+          <button
+            class="btn btn-default"
+            type="submit"
+            [disabled]="newPhoneForm.invalid"
+          >
+            Записати <i class="material-icons">
+              create
+            </i>
+          </button>
         </div>
       </div>
-      <footer>
-        <button
-          class="btn btn-default"
-          type="submit"
-          [disabled]="newPhoneForm.invalid"
-          (click)="startUpload()"
-        >
-          Записати <i class="material-icons">
-            create
-          </i>
-        </button>
-      </footer>
+
     </form>
   </div>
+
 </section>
 
 
@@ -253,7 +170,7 @@
     <h4 class="modal-title pull-left">Modal</h4>
   </div>
   <div class="modal-body">
-    Додати новий контакт <b>{{ newPhone.first }}</b>?
+    Додати новий контакт?
   </div>
   <footer>
     <button

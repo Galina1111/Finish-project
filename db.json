@@ -1,6 +1,7 @@
 {
-  "phone": [
+  "phones": [
     {
+      "id": 1,
       "image": "https://randomuser.me/api/portraits/men/77.jpg",
       "title": "mr. ",
       "first": "Gustavo",
@@ -14,6 +15,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
     },
     {
+      "id": 2,
       "image": "https://randomuser.me/api/portraits/women/88.jpg",
       "title": "mrs. ",
       "first": "Amy",
@@ -27,6 +29,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
     },
     {
+      "id": 3,
       "image": "https://randomuser.me/api/portraits/men/81.jpg",
       "title": "mr. ",
       "first": "Alfredo",
@@ -40,6 +43,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
     },
     {
+      "id": 4,
       "image": "https://randomuser.me/api/portraits/women/47.jpg",
       "title": "mrs. ",
       "first": "Ennya",
@@ -51,6 +55,20 @@
       "city": "Caxias",
       "postcode": 75653,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore harum praesentium accusamus minus magnam adipisci minima dignissimos aut labore, sit molestiae, vitae, repellat sint quibusdam quisquam eligendi numquam veritatis at."
+    },
+    {
+      "id": 7,
+      "image": "assets/user-1.png",
+      "first": "Швець",
+      "last": "Галина",
+      "email": "dvxcv@hj.vfb",
+      "namberph": "55555555555555555",
+      "age": "22",
+      "street": "wfd.fdfgd",
+      "city": "dfd",
+      "postcode": "8563",
+      "description": "ь в качестве «рыбы» текст на том языке, который планируется использовать при запуске проекта. Сегодня существует несколько вариантов Lorem ipsum, кроме того, есть специальные генераторы, создающие собственные варианты текста на основе оригинального трактата, благодаря чему появляется ",
+      "isDescription": false
     }
   ]
 }

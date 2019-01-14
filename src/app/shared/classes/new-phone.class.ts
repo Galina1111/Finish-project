@@ -3,7 +3,7 @@ import { IPhone } from "../interfaces";
 export class NewPhone implements IPhone {
 
   constructor(
-    // public id: number = 0,
+    public id: number = 0,
     public image: string,
     public title: string,
     public first: string,

@@ -1,9 +1,4 @@
 <section>
-  <app-add-contact
-    (submitt)="isSubmit($event)"
-    (forms)="isforms($event)"
-    (change)="isChange($event)"
-  ></app-add-contact>
 
   <div class="conteiner">
     <div class="add-phone">
@@ -45,6 +40,7 @@
                 src="{{ item.image }}"
                 alt=""
               />
+
             </div>
             <div class="dani">
               <h5>{{item.title}} {{item.first +' '+ item.last }}</h5>
@@ -69,7 +65,7 @@
                       </p> -->
               <button
                 class="btn btn-outline-dark bb2"
-                (click)="onDeleteTodo(item)"
+                (click)="onDeleteContact(item)"
               >
                 del
               </button>

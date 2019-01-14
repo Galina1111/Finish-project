@@ -6,6 +6,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { UploadInput, UploadOutput, UploaderOptions } from 'ngx-uploader';
 import { ContactService } from 'src/app/shared/services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+//import { emit } from 'cluster';
 
 
 
@@ -18,7 +19,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 export class AddContactComponent implements OnInit {
   public phone: Array<IPhone>;
   private modalRef: BsModalRef;
-  public newPhone: IPhone;
+  //public NewPhone: IPhone;
+
 
   public image: string;
   public first: string;
@@ -35,33 +37,42 @@ export class AddContactComponent implements OnInit {
 
   @ViewChild('phoneModal') phoneModal: ElementRef;
   @ViewChild('newPhoneForm') newPhoneForm: FormGroup;
-  @Output() submitt: EventEmitter<IPhone> = new EventEmitter();
+  @Output() submitNewPhone: EventEmitter<IPhone> = new EventEmitter();
 
   @Output() change: EventEmitter<IPhone> = new EventEmitter();
-  // @Output() forms: EventEmitter<IPhone> = new EventEmitter();
-
-  constructor(private modalService: BsModalService) { }
+  @Output() forms: EventEmitter<IPhone> = new EventEmitter();
 
 
-
+  constructor(
+    private contactService: ContactService,
+    private modalService: BsModalService
+  ) { }
 
 
   ngOnInit() {
+
   }
 
-  public onSubmit(newPhone: IPhone): void {
-    this.newPhone = newPhone;
+  public onSubmit(): void {
     this.openModal();
   }
 
-  private savePhone(newPhone: IPhone): void {
-    let phone: IPhone;
 
-    phone = new NewPhone(this.image, this.title, this.first, this.last, this.email, this.namberph, this.age, this.street,
-      this.city, this.postcode, this.description);
-    this.submitt.emit(phone);
-    this.newPhoneForm.reset();
+  private addContacte(): void {
+    this.contactService.addContact(new NewPhone(this.isDescription, this.image, this.title,
+      this.first, this.last, this.email, this.namberph, this.age, this.street,
+      this.city, this.postcode, this.description)).subscribe(
+        data => {
+          console.log(data);
+          this.phone = data;
+        },
+        err => {
+          console.error(err);
+        }
+      );
   }
+
+
 
   openModal() {
     this.modalRef = this.modalService.show(this.phoneModal, {
@@ -75,7 +86,8 @@ export class AddContactComponent implements OnInit {
   }
 
   public save(): void {
+    this.addContacte();
+    this.newPhoneForm.reset();
     this.modalRef.hide();
-    this.savePhone(this.newPhone);
   }
 }
