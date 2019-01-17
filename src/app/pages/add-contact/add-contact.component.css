@@ -1,8 +1,8 @@
 *{
-  font-size: 20px;
+  font-size: 14px;
 }
 .conteiner{
-  width: 900px;
+  width: 900px; 
   margin: 0 auto;
   padding: 55px 34px;
 }
@@ -17,11 +17,16 @@ small {
 
 .boxes {
   margin: 6px 0;
+  width: 100%;
 } 
-
- p {
-   margin: 0 0 -29px -34px;
-} 
+.containers{
+  margin: 0 auto;
+}
+.box {
+  width: 400px;
+  margin: 0 auto;
+}
+/*   */
 .radio-inline{
   margin-left: 63px;
   margin-bottom: 65px;
@@ -30,37 +35,31 @@ small {
   margin: 0 0px 0 45px;
 }
 .sub {
-  margin: -83px 0 0 -29px;
+  width: 400px;
+  padding-top: 22px;
+  margin: 0 auto
 }
-.btn-default:hover {
+
+.input-group-prepend {
+  margin: 0 auto;
+  width: 400px;
+  margin-top: 22px;
+}
+textarea.form-control.ng-pristine.ng-valid.ng-touched {
+  width: 302px;
+}
+textarea.form-control {
+  height: auto;
+  height: 124px;
+}
+.btn-default {
+  cursor: pointer;
+  float: right;
+  margin: 0 -10px 0 0;
+}
+
+.btn:not(:disabled):not(.disabled):hover {
   background-color: #a4a598;
 }
-  
-img{
-  width: 233px;
-  height: 112px; 
-  /* margin: 0px 20px 0 168px; */
-}
+ 
 
-.thumbnail {
-  width: 223px;
-  height: 112px;
-  margin: 0px 20px 0 168px;
-}
-
-.image {
-  width: 223px;
-  height: 112px;
-}
-
-.image img {
-  -webkit-transition: all 1s ease; /* Safari and Chrome */
-  -moz-transition: all 1s ease; /* Firefox */
-  -ms-transition: all 1s ease; /* IE 9 */
-  -o-transition: all 1s ease; /* Opera */
-  transition: all 1s ease;
-}
-
-.image:hover img {
-    transform:scale(0.8);
-}

@@ -2,17 +2,6 @@
 .header img{
     width: 100%;
     height: 330px;
+    filter: brightness(76%);
 }
 
-h2{
-    font-family: 'Lobster', cursive;
-    font-size: 63px;
-    color: #7b7b7ba8;
-    text-shadow: #fffca8bd 2px 2px 0px, #9C9C9C 4px 4px 0px;
-    color: #696f69;
-    background: #fffca800;
-    position: absolute;
-    top: 135px;
-    left: 13%;
-    transform: skew(27deg, 162deg);
-}

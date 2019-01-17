@@ -6,7 +6,8 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { UploadInput, UploadOutput, UploaderOptions } from 'ngx-uploader';
 import { ContactService } from 'src/app/shared/services';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
-//import { emit } from 'cluster';
+import { Router } from '@angular/router';
+
 
 
 
@@ -38,14 +39,14 @@ export class AddContactComponent implements OnInit {
   @ViewChild('phoneModal') phoneModal: ElementRef;
   @ViewChild('newPhoneForm') newPhoneForm: FormGroup;
   @Output() submitNewPhone: EventEmitter<IPhone> = new EventEmitter();
-
   @Output() change: EventEmitter<IPhone> = new EventEmitter();
   @Output() forms: EventEmitter<IPhone> = new EventEmitter();
 
 
   constructor(
     private contactService: ContactService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private router: Router,
   ) { }
 
 
@@ -89,5 +90,7 @@ export class AddContactComponent implements OnInit {
     this.addContacte();
     this.newPhoneForm.reset();
     this.modalRef.hide();
+    this.router.navigate(['/'])
+
   }
 }

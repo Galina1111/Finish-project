@@ -5,7 +5,8 @@
     display: flex;
 }
 .conteiner{
-    width: 1000px;
+    /* width: 1000px; */
+    width: 70%;
     margin: 0 auto;
     /* padding: 55px 34px; */
 }
@@ -37,11 +38,6 @@ i.far.fa-envelope {
     font-size: 17px;
 }
 
-
-
-
-
-
   
   button.btn-primary {
     border-color: #007bff00;
@@ -53,11 +49,12 @@ i.far.fa-envelope {
   .phone-description label {
     width: 95px;
     text-align: left;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
     color: #5a035a;
 }
-
- 
+button.btn.btn-outline-dark.bb1 {
+  margin: 0 0 0 -10px;
+}
 .btn-danger {
     border-color: #dc354500;
 }
@@ -81,3 +78,82 @@ img {
     border-radius: 84px;
     width: 124px;
 }
+
+
+@media screen and (max-width: 1100px) {
+    *{
+        font-size: 15px;
+    }
+    img{
+        width: 110px;
+    }
+    button.btn.btn-outline-dark.bb1 {
+        margin: 0 0 0px 5px;
+    }
+    .phone-description[_ngcontent-c4] {
+      margin: -18px 0 0 189px;
+      line-height: 1;
+  }
+}
+@media screen and (max-width: 955px) {
+  button.btn.btn-outline-dark.bb1 {
+      width: 102px;
+      font-size: 14px;
+      margin: 0 0 0px 16px;
+  }
+  button.btn.btn-outline-dark.bb2 {
+   font-size: 14px;
+}
+}
+
+@media screen and (max-width: 861px) {
+    button.btn.btn-outline-dark.bb1 {
+        margin: 0 0 0px -1px;
+    }
+    button.btn.btn-outline-dark.bb1 {
+      margin: 0 0 0px -36px;
+  }
+  img{
+      width: 102px;
+  }
+  .phone-description[_ngcontent-c4] {
+    margin: -10px 0 0 167px;
+    line-height: 1;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  *{
+      font-size: 12px;
+  }
+  img{
+      width:46px;
+  }
+  button.btn.btn-outline-dark.bb1 {
+    font-size: 11px;
+    margin: 78px 0px 0px -149px;
+ }
+ button.btn.btn-outline-dark.bb2 {
+  font-size: 11px;
+  margin: 78px 0 0px -88px;
+ }
+ .dani[_ngcontent-c4] {
+  margin: 5px -48px;
+ }
+ .list-group-flush .list-group-item {
+  height: 148px;
+ }
+ .phone-description[_ngcontent-c4] {
+  margin: 64px 0 0 52px;
+  line-height: 1;
+  width: 271px;
+  display: contents;
+ }
+ .header[_ngcontent-c1] img[_ngcontent-c1]  {
+  height: 0px;
+
+ }
+ 
+}
+

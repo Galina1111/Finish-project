@@ -1,5 +1,4 @@
 <section>
-
   <div class="conteiner">
     <div class="add-phone">
       <div class="input-group mb-3 search">
@@ -59,10 +58,6 @@
                 {{item.isDescription ? 'hide': 'show'}} deteils
               </button>
 
-
-              <!-- <a class="more-about-user"
-                    [routerLink]="user.name">More about {{ user.name }}.</a>
-                      </p> -->
               <button
                 class="btn btn-outline-dark bb2"
                 (click)="onDeleteContact(item)"
@@ -91,5 +86,22 @@
       </li>
     </ul>
   </div>
-
 </section>
+
+<!-- <ng-template #phoneDelModal>
+  <div class="modal-body">
+    Delete contact?
+  </div>
+  <footer>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="cancel()"
+    >Cancel</button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="save()"
+    >Save</button>
+  </footer>
+</ng-template> -->

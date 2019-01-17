@@ -3,7 +3,7 @@ import { NewPhone } from 'src/app/shared/classes';
 import { IPhone } from 'src/app/shared/interfaces';
 import { FormGroup, NgControl } from '@angular/forms';
 import { ContactService } from 'src/app/shared/services';
-import { BsModalService } from 'ngx-bootstrap';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 
 
 @Component({
@@ -14,6 +14,9 @@ import { BsModalService } from 'ngx-bootstrap';
 export class ContactComponent implements OnInit {
   [x: string]: any;
   public phone: Array<IPhone>;
+  private modalRef: BsModalRef;
+
+
 
   @Input() imeges: string;
   @Input() submitNewPhone: Array<IPhone>;
@@ -22,7 +25,7 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private contactService: ContactService,
-
+    private modalService: BsModalService
   ) {
     this.phone = [];
   }
@@ -67,15 +70,36 @@ export class ContactComponent implements OnInit {
   public onDeleteDescription(item: IPhone): void {
     item.isDescription = !item.isDescription;
   }
-
   public onDeleteContact(item: IPhone): void {
     this.contactService.delContact(item.id).subscribe(() => {
       this.getPhonee();
     });
   }
 
+  // public onDeleteContact(): void {
+  //   this.openModal();
+  // }
+  // public onDeleteCont(item: IPhone): void {
+  //   this.contactService.delContact(item.id).subscribe(() => {
+  //     this.getPhonee();
+  //   });
+  // }
 
+  // openModal() {
+  //   this.modalRef = this.modalService.show(this.phoneDelModal, {
+  //     class: 'modal-dialog-centered app-modal',
+  //     ignoreBackdropClick: true
+  //   });
+  // }
 
+  // public cancel(): void {
+  //   this.modalRef.hide();
+  // }
+
+  // public save(): void {
+  //   this.onDeleteCont(this.id);
+  //   this.modalRef.hide();
+  // }
 
 
 }

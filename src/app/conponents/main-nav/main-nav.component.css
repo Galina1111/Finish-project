@@ -1,7 +1,7 @@
 .conteiner{
     width: 900px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 14px;
 }
 .navbar-nav{
     flex-direction: row;
@@ -17,5 +17,6 @@
     color: rgba(247, 240, 240, 0.75);
 }
 nav ul a:hover {
-    background-color: rgba(117, 121, 121, 0.64);
+    /* background-color: rgba(117, 121, 121, 0.64); */
+    text-decoration: underline;
 }

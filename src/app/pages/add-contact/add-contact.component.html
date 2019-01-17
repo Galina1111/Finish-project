@@ -5,65 +5,9 @@
       #newPhoneForm="ngForm"
       (ngSubmit)="onSubmit()"
     >
-      <div class="containers form-group row">
-        <div class="containeis  form-group col-lg-6">
+      <div class="containers form-group">
 
-
-          <label
-            class="radio-inline col"
-            for="colFormLabelSm"
-          >
-            <p>Gender:</p>
-            <div class="coll">
-              <input
-                type="radio"
-                name="title"
-                id="colFormLabelSm"
-                [(ngModel)]="image"
-                value="assets/user-1.png"
-              />mr.
-
-              <input
-                type="radio"
-                name="title"
-                [(ngModel)]="image"
-                value="assets/user-2.png"
-              />mrs.
-            </div>
-          </label>
-
-
-
-          <div class="form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Add a note
-                <i class="material-icons note">
-                  notes
-                </i>
-              </span>
-              <textarea
-                class="form-control"
-                name="description"
-                #newPhoneDescription='ngModel'
-                [(ngModel)]="description"
-                aria-label="With textarea"
-              ></textarea>
-            </div>
-          </div>
-
-          <div class="form-group thumbnail">
-            <div class="image">
-              <img
-                src="assets/kak-prosledit-za-abonentom-po-nomeru-mobilnogo1.jpg"
-                alt=""
-              >
-            </div>
-          </div>
-
-        </div>
-
-        <!-- // <div class="containers col"> -->
-        <div class="form-group col-lg-6 box">
+        <div class="form-group box">
           <input
             type="text"
             name="first"
@@ -140,37 +84,86 @@
           />
         </div>
 
+        <div class="form-group sub container">
 
-      </div>
+          <h1>Gender:</h1>
+          <!-- Default inline 1-->
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              name="title"
+              [(ngModel)]="image"
+              value="assets/user-1.png"
+              class="custom-control-input"
+              id="defaultInline1"
+              name="inlineDefaultRadiosExample"
+              mdbInputDirective
+            >
+            <label
+              class="custom-control-label"
+              for="defaultInline1"
+            >Mr.</label>
+          </div>
 
+          <!-- Default inline 2-->
+          <div class="custom-control custom-radio custom-control-inline">
+            <input
+              type="radio"
+              name="title"
+              [(ngModel)]="image"
+              value="assets/user-2.png"
+              class="custom-control-input"
+              id="defaultInline2"
+              name="inlineDefaultRadiosExample"
+              mdbInputDirective
+            >
+            <label
+              class="custom-control-label"
+              for="defaultInline2"
+            >Mrs.</label>
+          </div>
+        </div>
 
-      <div class="form-group row col-lg-6 sub">
-        <div class="col-auto">
-          <button
-            class="btn btn-default"
-            type="submit"
-            [disabled]="newPhoneForm.invalid"
-          >
-            Записати <i class="material-icons">
-              create
-            </i>
-          </button>
+        <div class="form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Add a note
+              <i class="material-icons note">
+                notes
+              </i>
+            </span>
+            <textarea
+              class="form-control"
+              name="description"
+              #newPhoneDescription='ngModel'
+              [(ngModel)]="description"
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group sub">
+          <div class="col-auto">
+            <button
+              class="btn btn-default"
+              type="submit"
+              [disabled]="newPhoneForm.invalid"
+            >
+              Save <i class="material-icons">
+                create
+              </i>
+            </button>
+          </div>
         </div>
       </div>
-
     </form>
   </div>
-
 </section>
 
 
 
 <ng-template #phoneModal>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-  </div>
   <div class="modal-body">
-    Додати новий контакт?
+    Add a new contact?
   </div>
   <footer>
     <button

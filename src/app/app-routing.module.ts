@@ -4,9 +4,9 @@ import { ContactComponent, AddContactComponent } from './pages';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
-  {path: '', redirectTo:'contact', pathMatch: 'full'},
-  {path: 'contact', component: ContactComponent},
-  {path: 'add-contact', component: AddContactComponent},
+  /*{path: '', redirectTo:'contact', pathMatch: 'full'},*/
+  { path: '', component: ContactComponent },
+  { path: 'add-contact', component: AddContactComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

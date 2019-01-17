@@ -12,3 +12,17 @@
   .app-modal footer button:not(:last-child) {
     margin-right: 10px;
   }
+
+  div.modal-dialog.app-modal {
+    width: 260px;
+  }
+  
+.modal-body {
+  text-align: center;
+  padding-top: 30px;
+}
+.app-modal footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px 20px;
+} 
